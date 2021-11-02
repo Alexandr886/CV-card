@@ -62,12 +62,18 @@ body {
 .data__description {
    font-size: 15px;
    font-weight: 500;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 4;
+   -webkit-box-orient: vertical;
 }
 
 .data__description span {
    display: block;
    opacity: 0.6;
    margin-bottom: 10px;
+   width: 200px;
 }
 
 .online {
@@ -86,20 +92,18 @@ body {
    position: relative;
 }
 
-.online__title::after {
-   content: '';
-   position: absolute;
-   left: 0;
-   top: 100%;
+.progress-bar {
    width: 100%;
    height: 7px;
+   background: rgba(255, 255, 255, 0.3);
    border-radius: 10px;
-   opacity: 1;
-   background: linear-gradient(90deg, rgba(255, 255, 255, 1.0) 50%, rgba(255, 255, 255, 0.3) 50%);
 }
 
-.online__title_social::after {
-   background: linear-gradient(90deg, rgba(255, 255, 255, 1.0) 22%, rgba(255, 255, 255, 0.3) 22%);
+.progress-bar span {
+   display: block;
+   height: 100%;
+   background: #FFFFFF;
+   border-radius: 10px;
 }
 
 .about-me__biography {
