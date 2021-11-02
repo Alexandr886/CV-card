@@ -1,0 +1,174 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   background: #000000;
+   color: #FFFFFF;
+   font-family: 'Inter', sans-serif;
+}
+
+.title-h2 {
+   font-size: 30px;
+   font-weight: 600;
+   opacity: 0.9;
+   line-height: 83%;
+   margin-bottom: 15px;
+}
+
+.main {
+   height: 100vh;
+   display: flex;
+   align-content: center;
+}
+
+.card {
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.total-information,
+.about-me,
+.photo {
+   flex: 0 0 460px;
+   padding: 30px 10px;
+}
+
+.total-information__name {
+   font-size: 75px;
+   font-weight: 600;
+   line-height: 100%;
+   margin-bottom: 40px;
+}
+
+.info {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.data {
+   flex: 0 0 50%;
+   padding: 0 0 25px 0;
+}
+
+.data__logo {
+   margin-bottom: 9px;
+}
+
+.data__description {
+   font-size: 15px;
+   font-weight: 500;
+}
+
+.data__description span {
+   display: block;
+   opacity: 0.6;
+   margin-bottom: 10px;
+}
+
+.online {
+   margin-bottom: 25px;
+}
+
+.online:last-child {
+   margin-bottom: 0px;
+}
+
+.online__title {
+   font-size: 15px;
+   font-weight: 500;
+   opacity: 0.8;
+   line-height: 167%;
+   position: relative;
+}
+
+.online__title::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   top: 100%;
+   width: 100%;
+   height: 7px;
+   border-radius: 10px;
+   opacity: 1;
+   background: linear-gradient(90deg, rgba(255, 255, 255, 1.0) 50%, rgba(255, 255, 255, 0.3) 50%);
+}
+
+.online__title_social::after {
+   background: linear-gradient(90deg, rgba(255, 255, 255, 1.0) 22%, rgba(255, 255, 255, 0.3) 22%);
+}
+
+.about-me__biography {
+   margin-bottom: 40px;
+}
+
+.about-me__needs {
+   margin-bottom: 40px;
+}
+
+.about-me__text {
+   font-size: 15px;
+   font-weight: 500;
+   line-height: 167%;
+   list-style: none;
+   position: relative;
+   padding: 0 0 9px 0;
+   opacity: 0.8;
+}
+
+.about-me__text_needs {
+   margin: 0 0 0 13px;
+}
+
+.about-me__text_needs::before {
+   content: '';
+   position: absolute;
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+   background: #C4C4C4;
+   top: 11px;
+   left: -9px;
+}
+
+.photo {
+   background: url(images/avatar.png) no-repeat;
+   background-position: center;
+   height: 750px;
+   position: relative;
+}
+
+.photo .title-h2 {
+   position: absolute;
+   bottom: 0;
+   padding: 0 50px 70px 50px;
+   line-height: 117%;
+}
+
+.photo .title-h2::before {
+   content: '“';
+   margin: 0 0 0 -15px;
+}
+
+
+
+@media (max-width: 500px) {
+   .total-information,
+   .about-me,
+   .photo {
+      flex: 0 0 300px;
+   }
+
+   .total-information__name {
+      font-size: 60px;
+   }
+
+   .photo .title-h2 {
+      padding: 0 10px 70px 20px;
+      font-size: 24px;
+   }
+}
